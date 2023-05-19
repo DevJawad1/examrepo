@@ -1,8 +1,8 @@
-window.load=()=>{
+window.onload=()=>{
     loading.style.display="block"
     loading.style.transition="all 0.3s ease"
     general.style.display="none"
-    load.innerHTML+=`
+    loading.innerHTML+=`
     <div style="  position: absolute;
     top: 50%;
     left: 50%;
@@ -11,12 +11,12 @@ window.load=()=>{
     <img src="./Image folder/loading-waiting.gif" alt="" style=" width:200px">
     <h1 style="color:navy; text-align:center; font-size:45px">Loading</h3>
     </div>
-    <div style="width:100%; height:100%; position:absolute; top:0%; left:0%; background-color:rgba(0, 0, 0, 0.409)">
+    <div style="width:100%; height:100%; position:absolute; top:0%; left:0%; background-color: rgba(0, 0, 128, 0.213)">
 
     </div>
     `
+    setTimeout(function(){general.style.display="block", loading.style.display="none"}, 2000)
 }
-console.log(loading);
 let allActivities=[]
     let eachUser = {
         cart: [],
@@ -262,10 +262,10 @@ allbags.map((bag, i) => {
     `
 })
 const cart = () => {
-    load.style.display="block"
-    load.style.transition="all 0.3s ease"
+    loading.style.display="block"
+    loading.style.transition="all 0.3s ease"
     general.style.display="none"
-    load.innerHTML=`
+    loading.innerHTML=`
     <div style="  position: absolute;
     top: 50%;
     left: 50%;
@@ -322,3 +322,4 @@ function bod(){
         dot.style.display="block"
         dot2.style.display="block"
     }
+}
